@@ -1,0 +1,95 @@
+/* Estilos Gerais */
+body, html {
+
+    background-color: #f1f1f1; /* Cor de fundo do corpo*/
+    color: #333333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+#pessoal {
+
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px; /* Espaçamento interno */
+
+}
+
+h1, h2 {
+
+    color: #007bff;
+
+}
+
+#cabecalho {
+
+    text-align: center;
+
+}
+
+nav {
+
+    display: none; /* Inicialmente escondido */
+    background: #333333;
+    padding: 10px;
+
+}
+
+nav ul {
+
+    list-style-type: none; /* Removee as bolinhas de lista do lado do itens do nav */
+
+}
+
+nav ul li a {
+
+    color: white; 
+
+}
+
+#rodape {
+
+    text-align: center;
+    color: #666666;
+    margin-top: 20px;
+
+}
+
+/* Estilização das img do Carrossel */
+.carrossel img {
+
+    width: 100%;
+    display: none;
+
+}
+
+/* determin o comportamento da primeira imagem */
+.carrossel img:first-child {
+
+    display: block; /* Mostrar a primeira imagem inicialmente */
+
+}
+
+/* Estilos do botão do carrossel */
+.carrossel button {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    #formacao, #experiencia, #habilidades {
+        text-align: center;
+    }
+}
+
+/* Estilos Responsivos */
+@media (max-width: 520px) {
+    #principal {
+        padding: 10px;
+    }
+}

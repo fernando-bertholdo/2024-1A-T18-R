@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"> <!-- Torna o layout responsivo -->
+
+	<title>Meu Currículo</title>
+
+  <link rel="stylesheet" type="text/css" href="estilo.css"> <!-- Inclui arquivo de estilos CSS -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> <!-- Inclui jQuery -->
+
+</head>
+
+<body>
+
+  <nav> <!-- Navegação do currículo -->
+
+      <ul>
+          <!-- Links do menu de navegação para direcionamento direto a seções do currículo/págiina -->
+          <li><a href="#cabecalho">Início</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#experiencia">Experiência</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+
+      </ul>
+
+  </nav>
+
+  <!-- Cada seção do currículo tem seu próprio div com id -->
+  <div id="pessoal">
+
+      <div id="cabecalho">
+
+          <h1>Fernando Tavares Bertholdo</h1>
+          <p>Desenvolvedor</p>
+
+      </div>
+
+      <div id="formacao">
+
+          <h2>Formação Acadêmica</h2>
+          <p>Graduação em Engenharia de Computação - Inteli</p>
+
+      </div>
+
+      <div id="experiencia">
+
+          <h2>Experiência Profissional</h2>
+          <p>Head de comunidade na MafaTech</p>
+
+      </div>
+
+      <div id="habilidades">
+
+          <h2>Habilidades</h2>
+          <p>JavaScript, Python, React</p>
+
+      </div>
+
+      <div class="carrossel"> <!-- Elemento carrossel de imagens a ser manipulado com JQuery-->
+
+          <img src="../assets/doggo1.jpg" alt="Imagem 1">
+          <img src="../assets/doggo2.jpg" alt="Imagem 2" style="display:none;">
+          <img src="../assets/doggo3.jpg" alt="Imagem 3" style="display:none;">
+          <!-- Botões para navegar pelo carrossel -->
+          <button class="prev">Anterior</button>
+          <button class="next">Próximo</button>
+
+      </div>
+
+      <div id="rodape">
+
+          <p>Contato: fernando.berthodo@sou.inteli.edu.br</p>
+
+      </div>
+
+  </div>
+
+  <script src="script.js"></script> <!-- Inclui o arquivo do script para manipulação do html utilizando JQuery -->
+
+</body>
+
+</html>

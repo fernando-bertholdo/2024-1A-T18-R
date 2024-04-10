@@ -1,0 +1,43 @@
+/* Estilos Gerais */
+body, html {
+	background-color: #f1f1f1;
+	color: #333;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#pessoal {
+	max-width: 960px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 20px;
+}
+
+h1, h2 {
+	color: #007bff;
+}
+
+#cabecalho {
+	text-align: center;
+}
+
+#rodape {
+	text-align: center;
+	color: #666;
+	margin-top: 20px;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+	#formacao, #experiencia, #habilidades {
+		text-align: center;
+	}
+}
+
+@media (max-width: 520px) {
+	#pessoal {
+		padding: 10px;
+	}
+}
