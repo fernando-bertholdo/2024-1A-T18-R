@@ -5,7 +5,7 @@ $(document).ready(function(){ // "$" em JQuery é um atalho/alias para "jQuery",
     });
 
     let currentIndex = 0; //determina o elemento do carrossel a partir do que ele irá iniciar 
-    const images = $('.carrossel img'); // seleciona todas as imagens do carrossel
+    const images = $('.carrossel img'); // cria a variável images que contém o elemento carrossel do html e seleciona todas as imagens dentro dele
     const imageCount = images.length; // Conta o número total de imagens no carrossel
 
     $('.next').click(function(){ // Evento de clique para avançar no carrossel
@@ -24,14 +24,14 @@ $(document).ready(function(){ // "$" em JQuery é um atalho/alias para "jQuery",
     function loadFormacao() {
         $.ajax({
             url: '/formacao', // Endpoint do servidor que retorna os dados de formação
-            type: 'GET', // Método  GET
+            type: 'GET',
             success: function(data) {
                 // Processa a resposta e atualiza o conteúdo do div #formacao-content
-                var formacaoHtml = '';
+                var formacaoHtml = ''; // Cria uma variável para armazenar o HTML
                 data.forEach(function(formacao) {
-                    formacaoHtml += '<p>' + formacao.Instituicao + ' - ' + formacao.Curso + '</p>';
+                    formacaoHtml += '<p>' + formacao.Instituicao + ' - ' + formacao.Curso + '</p>'; // Cria um parágrafo com o nome da instituição e do curso puxando da base de dados
                 });
-                $('#formacao-content').html(formacaoHtml);
+                $('#formacao-content').html(formacaoHtml); // Atualiza o conteúdo do div #formacao-content
             },
             error: function(xhr, status, error) {
                 // Caso ocorra algum erro na requisição
@@ -40,7 +40,7 @@ $(document).ready(function(){ // "$" em JQuery é um atalho/alias para "jQuery",
         });
     }
 
-    // Chama a função loadFormacao() quando a página estiver pronta
+    // Chama a função loadFormacao() ao carregar a página
     loadFormacao();
 
 });

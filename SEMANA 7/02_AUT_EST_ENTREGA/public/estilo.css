@@ -1,22 +1,27 @@
 /* Estilos Gerais */
 body, html {
-	background-color: #f1f1f1;
-	color: #333;
+	background-color: #18181f;
+	color: #949494;
 	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	text-align: center;
 }
 
 #pessoal {
+	text-align: center;
 	max-width: 960px;
 	margin: 0 auto;
-	background-color: #fff;
 	padding: 20px;
 }
 
 h1, h2 {
 	color: #007bff;
+}
+
+#nav {
+	text-align: left;
 }
 
 #cabecalho {

@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 const hostname = '127.0.0.1';
 const port = 3002;
-const DBPATH = path.join(__dirname, 'backend', 'dbCurriculo.db');
+const DBPATH = path.join('dbCurriculo.db');
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
