@@ -28,6 +28,13 @@ h1, h2 {
 	text-align: center;
 }
 
+.carrossel img {
+    width: 100%;       /* Faz com que a imagem preencha a largura do contêiner */
+    height: auto;      /* Mantém a proporção da imagem */
+    display: block;   
+	padding-bottom: 20px; /* Exibe a imagem como um bloco, o que remove qualquer espaço abaixo dela */
+}
+
 #rodape {
 	text-align: center;
 	color: #666;
