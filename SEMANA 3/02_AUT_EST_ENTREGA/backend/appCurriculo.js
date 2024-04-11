@@ -9,7 +9,8 @@ const hostname = '127.0.0.1';
 const port = 3000;
 const app = express();
 
-app.use(express.static("frontend/")); // Colocar toda a parte estática no frontend
+// Colocar toda a parte estática no frontend
+app.use(express.static("frontend/")); 
 
 // Definição dos endpoints para CRUD de Formação
 
@@ -49,7 +50,7 @@ app.post('/insereFormacao', urlencodedParser, (req, res) => {
     db.close();
 });
 
-// Buscar dados para atualização de uma formação (Update - Parte 1)
+// Buscar dados para atualizar de uma formação (Update)
 app.get('/atualizaFormacao', (req, res) => {
     res.statusCode = 200;
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -66,7 +67,7 @@ app.get('/atualizaFormacao', (req, res) => {
     db.close();
 });
 
-// Atualiza uma formação existente (Update - Parte 2)
+// Atualiza uma formação existente (Update)
 app.post('/atualizaFormacao', urlencodedParser, (req, res) => {
     res.statusCode = 200;
     res.setHeader('Access-Control-Allow-Origin', '*');

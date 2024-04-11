@@ -8,10 +8,10 @@ const DBPATH = '../data/dbCurriculo.db'; // Ajuste o caminho do seu banco de dad
 
 app.use(express.json());
 
-// Endpoint para Dados Pessoais
-app.get('/dadospessoais', (req, res) => {
+// Endpoint para detalhes pessoais (Pessoal)
+app.get('/pessoal', (req, res) => {
     var db = new sqlite3.Database(DBPATH);
-    var sql = 'SELECT * FROM Pessoa';
+    var sql = 'SELECT Nome, Foto, Endereco, Telefone, Email, Sobre_Mim FROM Pessoal';
     db.all(sql, [], (err, rows) => {
         if (err) {
             res.status(400).json({"error": err.message});
@@ -25,7 +25,7 @@ app.get('/dadospessoais', (req, res) => {
 // Endpoint para Formação
 app.get('/formacao', (req, res) => {
     var db = new sqlite3.Database(DBPATH);
-    var sql = 'SELECT * FROM Formacao ORDER BY AnoFim DESC';
+    var sql = 'SELECT Instituicao, Grau, Curso, Data_Inicio, Data_Termino, Descricao FROM Formacao ORDER BY Data_Termino DESC';
     db.all(sql, [], (err, rows) => {
         if (err) {
             res.status(400).json({"error": err.message});
@@ -36,24 +36,10 @@ app.get('/formacao', (req, res) => {
     db.close();
 });
 
-// Endpoint para Experiência
-app.get('/experiencia', (req, res) => {
+// Endpoint para Experiências
+app.get('/experiencias', (req, res) => {
     var db = new sqlite3.Database(DBPATH);
-    var sql = 'SELECT * FROM Experiencia ORDER BY AnoFim DESC';
-    db.all(sql, [], (err, rows) => {
-        if (err) {
-            res.status(400).json({"error": err.message});
-            return;
-        }
-        res.json(rows);
-    });
-    db.close();
-});
-
-// Endpoint para Realizações
-app.get('/realizacoes', (req, res) => {
-    var db = new sqlite3.Database(DBPATH);
-    var sql = 'SELECT * FROM Realizacoes ORDER BY Ano DESC';
+    var sql = 'SELECT Empresa, Titulo, Data_Inicio, Data_Termino, Descricao FROM Experiencia ORDER BY Data_Termino DESC';
     db.all(sql, [], (err, rows) => {
         if (err) {
             res.status(400).json({"error": err.message});
@@ -67,7 +53,7 @@ app.get('/realizacoes', (req, res) => {
 // Endpoint para Habilidades
 app.get('/habilidades', (req, res) => {
     var db = new sqlite3.Database(DBPATH);
-    var sql = 'SELECT * FROM Habilidade ORDER BY NivelProficiencia DESC';
+    var sql = 'SELECT Habilidade, Proficiencia FROM Habilidades ORDER BY Proficiencia DESC';
     db.all(sql, [], (err, rows) => {
         if (err) {
             res.status(400).json({"error": err.message});
@@ -81,7 +67,7 @@ app.get('/habilidades', (req, res) => {
 // Endpoint para Personalidade
 app.get('/personalidade', (req, res) => {
     var db = new sqlite3.Database(DBPATH);
-    var sql = 'SELECT * FROM Personalidade ORDER BY Nivel DESC';
+    var sql = 'SELECT Traco, Descricao FROM Personalidade';
     db.all(sql, [], (err, rows) => {
         if (err) {
             res.status(400).json({"error": err.message});
