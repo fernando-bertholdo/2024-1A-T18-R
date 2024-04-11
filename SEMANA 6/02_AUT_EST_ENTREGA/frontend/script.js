@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function(){ // "$" em JQuery é um atalho/alias para "jQuery", que é uma função
     // Evento de clique para alternar a visibilidade do menu
     $('#menu-toggle').click(function(){
         $('nav').toggle();

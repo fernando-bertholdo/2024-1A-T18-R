@@ -1,20 +1,19 @@
-/* Estilos Gerais */
+/* Estilos gerais que se aplicam qando não atendem a nenhum breakpoint específico, geralmente aplica-se para desktops (tela maior) */
 body, html {
 
     background-color: #f1f1f1; /* Cor de fundo do corpo*/
     color: #333333;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
 
 }
 
 #pessoal {
 
     max-width: 960px;
-    margin: 0 auto;
+    margin: 20px auto;
     background-color: #ffffff;
-    padding: 20px; /* Espaçamento interno */
+    padding: 20px;
 
 }
 
@@ -24,72 +23,56 @@ h1, h2 {
 
 }
 
-#cabecalho {
+#cabecalho, #formacao, #experiencia, #habilidades, #rodape {
 
-    text-align: center;
-
-}
-
-nav {
-
-    display: none; /* Inicialmente escondido */
-    background: #333333;
-    padding: 10px;
+    padding: 20px;
 
 }
 
-nav ul {
-
-    list-style-type: none; /* Removee as bolinhas de lista do lado do itens do nav */
-
-}
-
-nav ul li a {
-
-    color: white; 
-
-}
-
-#rodape {
-
-    text-align: center;
-    color: #666666;
-    margin-top: 20px;
-
-}
-
-/* Estilização das img do Carrossel */
-.carrossel img {
-
-    width: 100%;
-    display: none;
-
-}
-
-/* determin o comportamento da primeira imagem */
-.carrossel img:first-child {
-
-    display: block; /* Mostrar a primeira imagem inicialmente */
-
-}
-
-/* Estilos do botão do carrossel */
-.carrossel button {
-    cursor: pointer;
-    padding: 5px 10px;
-    margin: 5px;
-}
-
-/* Estilos Responsivos */
+/* Breakpoint para tablets: ajusta o layout para telas até 768px de largura */
 @media (max-width: 768px) {
-    #formacao, #experiencia, #habilidades {
-        text-align: center;
+
+    #pessoal {
+
+        margin: 10px;
+        padding: 15px;
+
+    }
+
+    h1 {
+
+        font-size: 24px;
+
+    }
+
+    #cabecalho, #formacao, #experiencia, #habilidades, #rodape {
+
+        padding: 15px;
+
     }
 }
 
-/* Estilos Responsivos */
+/* Breakpoint para celulares: ajusta o layout para telas até 520px de largura */
 @media (max-width: 520px) {
-    #principal {
+
+    #pessoal {
+
+        margin: 5px;
         padding: 10px;
+
     }
+
+    h1 {
+
+        font-size: 20px;
+
+    }
+
+    #cabecalho, #formacao, #experiencia, #habilidades, #rodape {
+
+        padding: 10px;
+        text-align: center; /* Centraliza o texto para melhor leitura numa tela pequena */
+
+    }
+
 }
